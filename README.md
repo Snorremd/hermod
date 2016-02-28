@@ -1,5 +1,7 @@
 # Hermóðr
 
+[![Dependencies Status](https://jarkeeper.com/snorremd/hermod/status.svg)](https://jarkeeper.com/snorremd/hermod)
+
 Hermóðr the Brave (English: Hermod) is a Norse messenger god who rode to Hel to
 negotiate the release of Balder -
 [Wikipedia article](https://en.wikipedia.org/wiki/Herm%C3%B3%C3%B0r).

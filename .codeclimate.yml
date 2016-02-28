@@ -1,0 +1,5 @@
+engines:
+    kibit:
+        enabled: true
+    fixme:
+        enabled: true

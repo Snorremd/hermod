@@ -13,7 +13,7 @@
   url should be a string and payload a standard edn/clojure map."
   [url payload service]
   (try (client/post url {:content-type :json
-                         :body (json/write-str payload)})
+                         :body         (json/write-str payload)})
        (catch
          Exception
          e
@@ -26,9 +26,9 @@
   [url channel botname message]
   (http-request url
                 (if-not channel
-                  {:text message
+                  {:text     message
                    :username botname}
-                  (assoc {:text message
+                  (assoc {:text     message
                           :username botname}
                     :channel channel))
                 "Slack"))
@@ -44,10 +44,10 @@
 (defn send-to-hipchat
   "Send notification to Hipchat room via Hipchat HTTP API."
   [token room botname message]
-  (pprint (http-request (hipchat-notification-url room token)
-                        {:message message
-                         :from    botname}
-                        "Hipchat")))
+  (http-request (hipchat-notification-url room token)
+                {:message message
+                 :from    botname}
+                "Hipchat"))
 
 (defn deploy-hook
   "Send notifications to Hipchat and/or Slack when lein deploy is run."
